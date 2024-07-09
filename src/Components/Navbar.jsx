@@ -1,25 +1,27 @@
-
-
 import img from './../assets/logo.svg'
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
-    <nav className=' flex justify-between items-center bg-slate-900 px-32 border-b-1 border-black'>
-        <div className='flex items-center '>
-            <img className='m-4' src={img} alt="" />
-            <h1 className='text-white font-bold text-[19px]'>GeekFood</h1>
-        </div>
-        <div className='flex'>
-            <ul className='flex text-white font-semibold'>
-                <li className='p-3 cursor-pointer'>Home</li>
-                <li className='p-3 cursor-pointer'>Qoutes</li>
-                <li className='p-3 cursor-pointer'>Resturants</li>
-                <li className='p-3 cursor-pointer'>Foods</li>
-                <li className='p-3 cursor-pointer'>Contacts</li>
-            </ul>
-        </div>
-        <div>
-            <button className='bg-blue-600 p-1 rounded-lg hover:bg-blue-500 hover:transition hover:duration-500'><span className=' font-semibold text-white m-2'>Get Started</span></button>
-        </div>
+    <nav className='flex flex-col md:flex-row justify-between items-center bg-slate-900 px-5 md:px-10 lg:px-32 border-b border-black'>
+      <div className='flex items-center'>
+        <img className='m-2 md:m-4 w-10 h-10' src={img} alt="Logo" />
+        <h1 className='text-white font-bold text-xl md:text-[19px]'>GeekFood</h1>
+      </div>
+      <div className='flex flex-col md:flex-row items-center'>
+        <ul className='flex flex-col md:flex-row text-white font-semibold'>
+          <li className='p-2 md:p-3 cursor-pointer'><Link to="/">Home</Link></li>
+          <li className='p-2 md:p-3 cursor-pointer'><Link to="qoutes">Quotes</Link></li>
+          <li className='p-2 md:p-3 cursor-pointer'><Link to="restaurents">Restaurants</Link></li>
+          <li className='p-2 md:p-3 cursor-pointer'><Link to="foods">Foods</Link></li>
+          <li className='p-2 md:p-3 cursor-pointer'><Link to="contacts">Contacts</Link></li>
+        </ul>
+      </div>
+      <div className='mt-2 md:mt-0'>
+        <button className='bg-blue-600 py-1 px-3 rounded-lg hover:bg-blue-500 transition duration-500'>
+          <span className='font-semibold text-white'>Get Started</span>
+        </button>
+      </div>
     </nav>
   )
 }
