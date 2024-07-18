@@ -1,5 +1,5 @@
 import img from './../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -10,11 +10,11 @@ function Navbar() {
       </div>
       <div className='flex flex-col md:flex-row items-center'>
         <ul className='flex flex-col md:flex-row text-white font-semibold'>
-          <li className='p-2 md:p-3 cursor-pointer'><Link to="/">Home</Link></li>
-          <li className='p-2 md:p-3 cursor-pointer'><Link to="qoutes">Quotes</Link></li>
-          <li className='p-2 md:p-3 cursor-pointer'><Link to="restaurents">Restaurants</Link></li>
-          <li className='p-2 md:p-3 cursor-pointer'><Link to="foods">Foods</Link></li>
-          <li className='p-2 md:p-3 cursor-pointer'><Link to="contacts">Contacts</Link></li>
+          <li className='p-2 md:p-3 cursor-pointer'><NavLink to="/">Home</NavLink></li>
+          <li className='p-2 md:p-3 cursor-pointer'><NavLink to="qoute">Quote</NavLink></li>
+          <li className='p-2 md:p-3 cursor-pointer'><NavLink to="restaurents">Resturants</NavLink></li>
+          <li className='p-2 md:p-3 cursor-pointer'><NavLink to="foods">Foods</NavLink></li>
+          <li className='p-2 md:p-3 cursor-pointer'><NavLink to="contacts">Contacts</NavLink></li>
         </ul>
       </div>
       <div className='mt-2 md:mt-0'>

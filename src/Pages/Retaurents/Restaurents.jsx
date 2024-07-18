@@ -1,5 +1,5 @@
-import RestaurentsHero from "../../Components/RestaurentsHero";
-import RestaurentsSearch from "../../Components/RestaurentsSearch";
+import RestaurentsHero from "../../Components/Restaurents/RestaurentsHero";
+import RestaurentsSearch from "../../Components/Restaurents/RestaurentsSearch/RestaurentsSearch";
 
 
 function Restaurents() {
