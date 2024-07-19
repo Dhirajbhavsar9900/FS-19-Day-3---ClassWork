@@ -16,16 +16,14 @@ function RestaurantsHero() {
 
   return (
     <section className=" bg-gray-100 p-5">
-     <RestaurentsSearch onchange={(searching)=>{setSearching(searching)}}/>
+      <RestaurentsSearch onchange={(searching)=>{setSearching(searching)}}/>
       <div className="restaurants-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filter.map((item, index) => (
-          <RestaurentCards  item={item} index={index}/>
+          <RestaurentCards item={item} index={index}/>
         ))}
       </div>
-
-     
     </section>
   );
 }
 
-export default RestaurantsHero;
+export default RestaurantsHero
